@@ -179,7 +179,7 @@ db.teachers.insertMany([
     phoneNumber: "087-472-8317",
     courseInfo: [
       {
-        courseID: "c001",
+        courseID: "c005",
         semester: "Spring 2024",
       },
       {
@@ -339,7 +339,6 @@ db.teachers.insertMany([
   },
 ]); // teachers中对course的引用，和student一样，都使用了自定义的_id
 
-// TODO: add teachers to each department
 db.department.insertMany([
   {
     _id: "d001",
@@ -347,7 +346,7 @@ db.department.insertMany([
     name: "Department of Computer Science",
     head: "Prof. Organ",
     courses: [201, 202, 203, 204], // referencing
-    teachers: [1, 2], // referencing
+    teachers: [1, 2, 3, 4], // referencing
   },
   {
     _id: "d002",
@@ -355,7 +354,7 @@ db.department.insertMany([
     name: "Department of Art and Literature",
     head: "David Canny",
     courses: [101, 102, 103],
-    teachers: [3],
+    teachers: [5, 6, 7],
   },
   {
     _id: "d003",
@@ -363,6 +362,7 @@ db.department.insertMany([
     name: "Department of History",
     head: "Lance Robert",
     courses: [301, 302, 303],
+    teachers: [8, 9, 10],
   },
   {
     _id: "d004",
@@ -370,6 +370,7 @@ db.department.insertMany([
     name: "Department of Law",
     head: "Kevin Morgan",
     courses: [501, 502, 503],
+    teachers: [11, 12, 13],
   },
   {
     _id: "d005",
@@ -377,6 +378,7 @@ db.department.insertMany([
     name: "Department of Psychology",
     head: "James Holland",
     courses: [401, 402, 403],
+    teachers: [14, 15, 16],
   },
   {
     _id: "d006",
@@ -384,5 +386,6 @@ db.department.insertMany([
     name: "Department of Business Administration",
     head: "Sansa White",
     courses: [601, 602, 603, 604],
+    teachers: [17, 18, 19, 20],
   },
 ]); // department中对course,teachers的引用，使用了手动设置的ID
