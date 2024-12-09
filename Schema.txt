@@ -1,0 +1,35 @@
+1. Student Table
+StudentID   INT(PK)
+FirstName   VARCHAR
+LastName    VARCHAR
+Email   VARCHAR
+PhoneNumber     VARCHAR
+
+2.Courses Table
+CourseID    INT(PK)
+CourseName      VARCHAR
+Credit      INT
+
+3.Enrollments Table
+EnrollmentsID       INT(PK)
+StudentID   INT(FK)
+CourseID    INT(FK)
+EnrollmentDate      Date
+
+4.Grades Table
+GradeID     INT(PK)
+EnrollmentsID   INT(FK)
+Grade     CHAR(1)
+'''-------------------------------------------------------------------------------------------------------------------------------------------------'''
+db:
+School Management
+
+collections:
+
+student
+course
+teachers # 新增
+department # 新增
+
+TODO:
+1. student image url
