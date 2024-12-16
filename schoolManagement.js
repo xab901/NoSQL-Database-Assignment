@@ -1,4 +1,3 @@
-// TODO: more students needed
 db.student.insertMany([
   {
     _id: "s001",
@@ -86,6 +85,86 @@ db.student.insertMany([
       { courseRef: "c019", grade: "B", date: new Date() },
     ],
   },
+  {
+    _id: "s008",
+    studentID: 8,
+    firstName: "Richard",
+    lastName: "Harris",
+    email: "rharris@setu.ie",
+    phoneNumber: "086-263-2951",
+    enrollments: [
+      { courseRef: "c001", grade: "B", date: "2019-4-7" },
+      { courseRef: "c002", grade: "B", date: "2019-11-23" },
+      { courseRef: "c003", grade: "C", date: new Date() },
+    ],
+  },
+  {
+    _id: "s009",
+    studentID: 9,
+    firstName: "John",
+    lastName: "Brown",
+    email: "jbrown@setu.ie",
+    phoneNumber: "086-592-8143",
+    enrollments: [
+      { courseRef: "c004", grade: "A", date: "2017-5-16" },
+      { courseRef: "c005", grade: "D", date: "2020-6-7" },
+      { courseRef: "c006", grade: "C", date: "2021-8-15" },
+      { courseRef: "c007", grade: "A", date: new Date() },
+    ],
+  },
+  {
+    _id: "s010",
+    studentID: 10,
+    firstName: "David",
+    lastName: "Jackson",
+    email: "djackson@setu.ie",
+    phoneNumber: "086-673-4821",
+    enrollments: [
+      { courseRef: "c008", grade: "C", date: new Date() },
+      { courseRef: "c009", grade: "A", date: "2021-1-21" },
+      { courseRef: "c010", grade: "A", date: "2022-2-10" },
+    ],
+  },
+  {
+    _id: "s011",
+    studentID: 11,
+    firstName: "Thomas",
+    lastName: "Martinez",
+    email: "tmartinez@setu.ie",
+    phoneNumber: "086-943-8165",
+    enrollments: [
+      { courseRef: "c011", grade: "B", date: "2023-9-16" },
+      { courseRef: "c012", grade: "C", date: "2021-8-7" },
+      { courseRef: "c013", grade: "C", date: new Date() },
+    ],
+  },
+  {
+    _id: "s012",
+    studentID: 12,
+    firstName: "Sophia",
+    lastName: "Martin",
+    email: "smartin@setu.ie",
+    phoneNumber: "086-394-1265",
+    enrollments: [
+      { courseRef: "c014", grade: "A", date: "2024-8-1" },
+      { courseRef: "c015", grade: "B", date: new Date() },
+      { courseRef: "c016", grade: "C", date: "2017-4-27" },
+    ],
+  },
+  {
+    _id: "s013",
+    studentID: 13,
+    firstName: "William",
+    lastName: "Miller",
+    email: "wmiller@setu.ie",
+    phoneNumber: "086-481-6293",
+    enrollments: [
+      { courseRef: "c017", grade: "A", date: "2023-9-1" },
+      { courseRef: "c018", grade: "A", date: new Date() },
+      { courseRef: "c019", grade: "A", date: new Date() },
+      { courseRef: "c020", grade: "A", date: new Date() },
+    ],
+  },
 ]);
 
 db.course.insertMany([
@@ -152,7 +231,6 @@ db.course.insertMany([
   { _id: "c020", courseID: 604, courseName: "Entrepreneurship", credit: 4 },
 ]);
 
-// TODO: courseInfo modify and add
 db.teachers.insertMany([
   {
     _id: "t001",
@@ -179,11 +257,11 @@ db.teachers.insertMany([
     phoneNumber: "087-472-8317",
     courseInfo: [
       {
-        courseID: "c005",
+        courseRef: "c005",
         semester: "Spring 2024",
       },
       {
-        courseID: "c004",
+        courseRef: "c004",
         semester: "Fall 2025",
       },
     ],
@@ -196,8 +274,12 @@ db.teachers.insertMany([
     phoneNumber: "083-234-5678",
     courseInfo: [
       {
-        courseID: "408",
+        courseRef: "c006",
         semester: "Fall 2024",
+      },
+      {
+        courseRef: "c007",
+        semeseter: "Spring 2023",
       },
     ],
   },
@@ -207,7 +289,16 @@ db.teachers.insertMany([
     name: "James Anderson",
     email: "janderson@setu.ie",
     phoneNumber: "083-123-4567",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c005",
+        semester: "Fall 2024",
+      },
+      {
+        courseRef: "c006",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t005",
@@ -215,7 +306,16 @@ db.teachers.insertMany([
     name: "William Johnson",
     email: "wjohnson@setu.ie",
     phoneNumber: "085-987-6543",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c001",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c003",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t006",
@@ -223,7 +323,16 @@ db.teachers.insertMany([
     name: "Michael Brown",
     email: "mbrown@setu.ie",
     phoneNumber: "086-345-6789",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c002",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c003",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t007",
@@ -231,7 +340,16 @@ db.teachers.insertMany([
     name: "Benjamin Davis",
     email: "bdavis@setu.ie",
     phoneNumber: "089-432-1987",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c001",
+        semester: "Spring 2023",
+      },
+      {
+        courseRef: "c002",
+        semester: "Fall 2024",
+      },
+    ],
   },
   {
     _id: "t008",
@@ -239,7 +357,16 @@ db.teachers.insertMany([
     name: "Henry Wilson",
     email: "hwilson@setu.ie",
     phoneNumber: "087-567-8901",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c008",
+        semester: "Fall 2023",
+      },
+      {
+        courseRef: "c009",
+        semester: "Spring 2024",
+      },
+    ],
   },
   {
     _id: "t009",
@@ -247,7 +374,16 @@ db.teachers.insertMany([
     name: "Alexander Martinez",
     email: "amartinez@setu.ie",
     phoneNumber: "083-876-5432",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c009",
+        semester: "Fall 2024",
+      },
+      {
+        courseRef: "c010",
+        semester: "Spring 2023",
+      },
+    ],
   },
   {
     _id: "t010",
@@ -255,7 +391,16 @@ db.teachers.insertMany([
     name: "Daniel Garcia",
     email: "dgarcia@setu.ie",
     phoneNumber: "089-210-5437",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c008",
+        semester: "Spring 2023",
+      },
+      {
+        courseRef: "c010",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t011",
@@ -263,7 +408,16 @@ db.teachers.insertMany([
     name: "Matthew Clark",
     email: "mclark@setu.ie",
     phoneNumber: "087-890-4563",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c014",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c015",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t012",
@@ -271,7 +425,16 @@ db.teachers.insertMany([
     name: "Emma Hall",
     email: "ehall@setu.ie",
     phoneNumber: "086-765-4321",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c016",
+        semester: "Fall 2024",
+      },
+      {
+        courseRef: "c014",
+        semester: "Spring 2023",
+      },
+    ],
   },
   {
     _id: "t013",
@@ -279,7 +442,16 @@ db.teachers.insertMany([
     name: "Charlotte Allen",
     email: "callen@setu.ie",
     phoneNumber: "087-678-1234",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c015",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c016",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t014",
@@ -287,15 +459,33 @@ db.teachers.insertMany([
     name: "Amelia Young",
     email: null,
     phoneNumber: "085-345-6789",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c011",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c012",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t015",
     teacherID: 15,
     name: "Sophia King",
     email: "sking@setu.ie",
-    phoneNumber: "Sophia King",
-    courseInfo: [],
+    phoneNumber: "085-987-6543",
+    courseInfo: [
+      {
+        courseRef: "c013",
+        semester: "Fall 2024",
+      },
+      {
+        courseRef: "c011",
+        semester: "Spring 2023",
+      },
+    ],
   },
   {
     _id: "t016",
@@ -303,7 +493,16 @@ db.teachers.insertMany([
     name: "Isabella Wright",
     email: "iwright@setu.ie",
     phoneNumber: "089-654-3210",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c012",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c013",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t017",
@@ -311,7 +510,16 @@ db.teachers.insertMany([
     name: "Mia Scott",
     email: "mscott@setu.ie",
     phoneNumber: "086-789-1234",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c017",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c018",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t018",
@@ -319,7 +527,16 @@ db.teachers.insertMany([
     name: "Ava Green",
     email: "agreen@setu.ie",
     phoneNumber: "087-567-8902",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c019",
+        semester: "Fall 2024",
+      },
+      {
+        courseRef: "c017",
+        semester: "Spring 2023",
+      },
+    ],
   },
   {
     _id: "t019",
@@ -327,7 +544,16 @@ db.teachers.insertMany([
     name: "Evelyn Baker",
     email: "ebaker@setu.ie",
     phoneNumber: "085-432-1987",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c018",
+        semester: "Spring 2024",
+      },
+      {
+        courseRef: "c019",
+        semester: "Fall 2023",
+      },
+    ],
   },
   {
     _id: "t020",
@@ -335,7 +561,16 @@ db.teachers.insertMany([
     name: "Abigail Adams",
     email: "aadams@setu.ie",
     phoneNumber: "083-876-5432",
-    courseInfo: [],
+    courseInfo: [
+      {
+        courseRef: "c020",
+        semester: "Fall 2024",
+      },
+      {
+        courseRef: "c017",
+        semester: "Spring 2023",
+      },
+    ],
   },
 ]); // teachers中对course的引用，和student一样，都使用了自定义的_id
 
